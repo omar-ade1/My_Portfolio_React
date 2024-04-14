@@ -84,7 +84,7 @@ const Header = () => {
 
   // Handle Header Scroll
   const handleHeaderScroll = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 100) {
       // header.current Offen Be Undefined You Must Write This Condition To Check If header.current Not Equel To Undefined
       if (header.current) {
         // If You Don't Write This Condition The Animations Will Repeat
@@ -167,7 +167,7 @@ const Header = () => {
                   exit="exit"
                   className={`links-group 
                   flex absolute p-3 bg-[#023047] flex-col w-[300px] rounded left-0 mt-10  divide-y-2 divide-double divide-[var(--logo-color)]
-          `       }
+          `}
                 >
                   <motion.li variants={childVariants}>
                     <a className="header-link-mobile" href="#">
