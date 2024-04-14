@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --logo-color : #FFC300
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.headerNormal {
+  position: fixed !important;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  background-color: #001D3D;
+  animation-name: removee;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.headerNormal::before {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 40px;
+  background-color: #001D3D;
+  top: 0;
+  left: calc(-5vw + 1px);
+  border-bottom-left-radius: 100% 100%;
+}
+.headerNormal::after {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 40px;
+  background-color: #001D3D;
+  top: 0;
+  right: calc(-5vw + 1px);
+  border-bottom-right-radius: 100% 100%;
+}
+
+.headerScroll {
+  position: fixed !important;
+  background-color: #001D3D;
+  left: 0;
+  width: 100%;
+  animation-name: addd;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes addd {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes removee {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0%) translateX(-50%);
+  }
+}
+
+.header-link-mobile {
+  @apply py-3 w-full text-gray-100 font-semibold relative px-3 hover:translate-x-[40px] transition-all duration-300 block
+}
+.header-link-normal {
+  @apply py-1 text-gray-100 font-semibold relative px-3 before:content-[''] before:absolute before:w-0 before:h-[10px] before:bg-[var(--logo-color)] before:top-full before:transition-all before:duration-300 before:left-0 hover:before:w-[10px] before:rounded-full hover:before:left-1/2 block
+}
+
+.flex-between-center {
+  @apply flex justify-between items-center
+}
+.flex-center-center {
+  @apply flex justify-center items-center
+}
+.title::after {
+  content: "" ;
+  position: absolute;
+  border: 10px solid;
+  border-color: var(--logo-color) transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -26px;
+}
+.job::before {
+  content: "" ;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  right: -3px;
+  animation-name: opac;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }  
+  100% {
+    opacity:1;
+  }
+}
+.cv::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: #FFC300;
+  top: 0;
+
+  border-radius: 3px;
+  left: 0%;
+  transition: .3s;
+}
+.cv:hover::before {
+  height: 100%;
+  width: 100%;
+}
+.work::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: #f44336;
+  border-radius: 3px;
+  top: 0;
+  left: 0%;
+  transition: .3s;
+}
+.work:hover::before {
+  height: 100%;
+  width: 100%;
+}
+.image-me {
+  background: hsla(207, 90%, 4%, 1);
+
+background: linear-gradient(225deg, hsla(207, 90%, 4%, 1) 0%, hsla(211, 100%, 12%, 1) 100%);
+
+background: -moz-linear-gradient(225deg, hsla(207, 90%, 4%, 1) 0%, hsla(211, 100%, 12%, 1) 100%);
+
+background: -webkit-linear-gradient(225deg, hsla(207, 90%, 4%, 1) 0%, hsla(211, 100%, 12%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#010B13", endColorstr="#001D3D", GradientType=1 );
+}
