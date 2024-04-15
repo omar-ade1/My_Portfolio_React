@@ -10,9 +10,75 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+
+/*? -------------------------------------------------------------------------- */
+/*?                                Global Styles                               */
+/*? -------------------------------------------------------------------------- */
+
+.titleOfSection {
+  animation-name: title;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  background-color: #003566;
+    box-shadow: 0px 0px 10px 10px #003566,
+    10px 10px 10px 10px #003566,
+    -10px -10px 10px 10px #003566
+    ;
+    text-shadow: 0px 0px 5px #FFC300,
+    10px 10px 5px #FFC300,
+    -10px -10px 5px #FFC300
+    ;
+    font-family: "Permanent Marker", cursive;
+
+
+  }
+@keyframes title {
+  from {
+    background-color: #003566;
+    box-shadow: 
+    0px 0px 10px 10px #003566,
+    10px 10px 10px 10px #003566,
+    -10px -10px 10px 10px #003566
+    ;
+    text-shadow: 0px 0px 30px #FFC300,
+    10px 10px 30px #FFC300,
+    -10px -10px 30px #FFC300
+    ;
+  }
+  to {
+    background-color: #003566;
+    box-shadow: 
+    0px 0px 10px 10px #003566,
+    10px -10px 10px 10px #003566,
+    -10px 10px 10px 10px #003566;
+
+
+    text-shadow: 0px 0px 50px #FFC300,
+    -10px 10px 50px #FFC300,
+    10px -10px 50px #FFC300
+    ;
+
+  }
+  
+}
+/*? -------------------------------------------------------------------------- */
+/*?                               End Global Styles                            */
+/*? -------------------------------------------------------------------------- */
+
+
+
+
+
+
+
 @layer components {
   .btn {
     @apply relative overflow-hidden block p-2 rounded capitalize;
+  }
+
+  .skills-box {
+    @apply flex transition-shadow duration-300 relative flex-col p-2 justify-center items-center bg-[#003566] odd:bg-[#023047] rounded-xl h-[160px] overflow-hidden; 
   }
 }
 
@@ -25,32 +91,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   margin: auto;
-  background-color: #001d3d;
   animation-name: animationNormal;
   animation-duration: 1s;
   animation-iteration-count: 1;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-}
-.headerNormal::before {
-  content: "";
-  position: absolute;
-  width: 5vw;
-  height: 40px;
-  background-color: #001d3d;
-  top: 0;
-  left: calc(-5vw + 1px);
-  border-bottom-left-radius: 100% 100%;
-}
-.headerNormal::after {
-  content: "";
-  position: absolute;
-  width: 5vw;
-  height: 40px;
-  background-color: #001d3d;
-  top: 0;
-  right: calc(-5vw + 1px);
-  border-bottom-right-radius: 100% 100%;
 }
 
 .headerScroll {
@@ -155,3 +200,43 @@ body {
 /*? -------------------------------------------------------------------------- */
 /*?                              End Hero Section                              */
 /*? -------------------------------------------------------------------------- */
+
+
+/*! -------------------------------------------------------------------------- */
+/*!                                 Skills Part                                */
+/*! -------------------------------------------------------------------------- */
+
+.skills-box:hover {
+  box-shadow: 0 0 10px 0px #FFC300;
+}
+
+.skills-box:hover::before {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+.skills-box::before {
+  content: attr(data-skill);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: black;
+  text-shadow: 0px 0px 50px white,
+  -10px 10px 50px white,
+  10px -10px 50px white
+  ;
+  position: absolute;
+  width: 90%;
+  height: 0px;
+  background: #FFC300;
+  bottom: -5px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transition: .3s ease-out;
+  
+}
+/*! -------------------------------------------------------------------------- */
+/*!                                End Skills Part                             */
+/*! -------------------------------------------------------------------------- */
