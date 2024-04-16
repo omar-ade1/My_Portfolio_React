@@ -73,31 +73,31 @@ const Skills = () => {
           className="container pt-[40px] xmdT0:grid-cols-[repeat(auto-fill,minmax(160px,1fr))] grid grid-cols-[repeat(4,160px)] justify-center gap-10 "
         >
           <motion.div variants={childVariants} data-skill="html" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./html.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./html.svg" alt="html" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="css" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./css.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./css.svg" alt="css" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="java script" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./js.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./js.svg" alt="js" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="react.js" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./react.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./react.svg" alt="react" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="redux toolkit" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./redux.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./redux.svg" alt="redux" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="tailwind" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./tailwind.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./tailwind.svg" alt="tailwind" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="api" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./api.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./api.svg" alt="api" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="json" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./json.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./json.svg" alt="json" />
           </motion.div>
           <motion.div variants={childVariants} data-skill="bootstrap" className="skills-box">
-            <motion.img variants={childChildVariants} className="max-h-full" src="./bootstrap.svg" alt="" />
+            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./bootstrap.svg" alt="bootstrap" />
           </motion.div>
         </motion.div>
       </div>

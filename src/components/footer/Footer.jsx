@@ -24,13 +24,13 @@ const Footer = () => {
 
 <div className="flex justify-center space-x-5">
     <a href="https://www.facebook.com/profile.php?id=100047232660129&sk=about" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+        <img loading='lazy' src="https://img.icons8.com/fluent/30/000000/facebook-new.png" alt='facebook'/>
     </a>
     <a href="https://www.linkedin.com/in/omar-adel-b429a32a2/?trk=opento_sprofile_goalscard" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+        <img loading='lazy' src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" alt='linkedin'/>
     </a>
     <a href="https://www.instagram.com/omar_o_adel/?hl=ar" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+        <img loading='lazy' src="https://img.icons8.com/fluent/30/000000/instagram-new.png" alt='instagram'/>
     </a>
     
 </div>

@@ -90,7 +90,7 @@ const Contact = () => {
             </form>
 
             <div className="img w-[40%] smT0:w-full flex justify-center items-center">
-              <img className="w-[300px]" src="./contact.svg" alt="" />
+              <img loading="lazy" className="w-[300px]" src="./contact.svg" alt="contact-img" />
             </div>
           </div>
         </div>

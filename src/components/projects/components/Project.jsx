@@ -57,7 +57,7 @@ const project = ({ img, title, demo, github }) => {
   return (
     <motion.div variants={childVariants} className="product border border-[#1e88e5] bg-[#003566] odd:bg-[#023047]  relative group rounded-xl  overflow-hidden">
       <div className="img-product relative rounded-xl overflow-hidden">
-        <motion.img loading="lazy" variants={childChildVariants} className="h-[250px] w-full object-cover" src={img} />
+        <motion.img loading="lazy" variants={childChildVariants} className="h-[250px] w-full object-cover" src={img} alt={title} />
         <div className="container-project-links mx-auto ">
           <div className="flex gap-3 p-2">
             <a href={github} target="_blank">
