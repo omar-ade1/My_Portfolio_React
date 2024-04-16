@@ -80,6 +80,10 @@ body {
   .skills-box {
     @apply flex transition-shadow duration-300 relative flex-col p-2 justify-center items-center bg-[#003566] odd:bg-[#023047] rounded-xl h-[160px] overflow-hidden; 
   }
+
+  .input-contact {
+    @apply smT0:col-span-4 col-span-2 outline-none row-span-1 text-lg p-2 bg-[#013566] rounded text-white
+  }
 }
 
 /*! -------------------------------------------------------------------------- */
@@ -240,3 +244,54 @@ body {
 /*! -------------------------------------------------------------------------- */
 /*!                                End Skills Part                             */
 /*! -------------------------------------------------------------------------- */
+/*  */
+.product {
+  user-select: none;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
+  /* 
+  background: hsla(210, 91%, 39%, 1);
+
+  background: linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0965C0", endColorstr="#C53A94", GradientType=1 );
+  */
+  box-shadow: 0px 0px 10px 3px #1e88e5;
+}
+.product:hover {
+  box-shadow: 0 0 10px 0px #FFC300;
+}
+
+.product:hover .container-project-links {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+.img-product .container-project-links {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: black;
+  text-shadow: 0px 0px 50px white,
+  -10px 10px 50px white,
+  10px -10px 50px white
+  ;
+  position: absolute;
+  width: 90%;
+  height: 0px;
+  background: #FFC300;
+  bottom: -5px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transition: .3s ease-out;
+  
+}
+
+.all-input-filld-contact:focus {
+  box-shadow: 0px 0px 10px 2px #1e88e5;
+
+}

@@ -49,7 +49,7 @@ const variantsBoxs = {
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
         <path
           fill="#051923"
@@ -60,7 +60,7 @@ const About = () => {
 
 
 
-      <div className="about bg-[#051923] py-[100px]">
+      <div className="about bg-[#051923] py-[50px]">
         <div className="container">
           <Title title={"About Me"} />
           <div className="flex justify-between smT0:flex-col items-center">

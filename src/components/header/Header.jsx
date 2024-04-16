@@ -169,24 +169,29 @@ const Header = () => {
                   flex absolute p-3 bg-[#023047] flex-col w-[300px] rounded left-0 mt-10  divide-y-2 divide-double divide-[var(--logo-color)]
           `}
                 >
-                  <motion.li variants={childVariants}>
-                    <a className="header-link-mobile" href="#">
+                  <motion.li onClick={() => setMenuOpen(false)} variants={childVariants}>
+                    <a className="header-link-mobile" href="#home">
                       Home
                     </a>
                   </motion.li>
-                  <motion.li variants={childVariants}>
-                    <a className="header-link-mobile" href="#">
+                  <motion.li onClick={() => setMenuOpen(false)} variants={childVariants}>
+                    <a className="header-link-mobile" href="#about">
                       About
                     </a>
                   </motion.li>
-                  <motion.li variants={childVariants}>
-                    <a className="header-link-mobile" href="#">
+                  <motion.li onClick={() => setMenuOpen(false)} variants={childVariants}>
+                    <a className="header-link-mobile" href="#skills">
                       Projects
                     </a>
                   </motion.li>
-                  <motion.li variants={childVariants}>
-                    <a className="header-link-mobile" href="#">
+                  <motion.li onClick={() => setMenuOpen(false)} variants={childVariants}>
+                    <a className="header-link-mobile" href="#projects">
                       Contact
+                    </a>
+                  </motion.li>
+                  <motion.li onClick={() => setMenuOpen(false)} variants={childVariants}>
+                    <a className="header-link-mobile" href="#contact">
+                      contact
                     </a>
                   </motion.li>
                 </motion.ul>
@@ -200,22 +205,27 @@ const Header = () => {
           `}
           >
             <li>
-              <a className="header-link-normal" href="#">
+              <a className="header-link-normal" href="#home">
                 Home
               </a>
             </li>
             <li>
-              <a className="header-link-normal" href="#">
+              <a className="header-link-normal" href="#about">
                 About
               </a>
             </li>
             <li>
-              <a className="header-link-normal" href="#">
+              <a className="header-link-normal" href="#skills">
+                Skills
+              </a>
+            </li>
+            <li>
+              <a className="header-link-normal" href="#projects">
                 Projects
               </a>
             </li>
             <li>
-              <a className="header-link-normal" href="#">
+              <a className="header-link-normal" href="#contact">
                 Contact
               </a>
             </li>

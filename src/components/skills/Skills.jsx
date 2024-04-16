@@ -52,14 +52,8 @@ const childChildVariants = {
 
 const Skills = () => {
   return (
-    <div className="bg-[#051923]">
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
-        <path
-          fill="#000814"
-          fillOpacity="1"
-          d="M0,192L0,160L360,160L360,32L720,32L720,256L1080,256L1080,64L1440,64L1440,320L1080,320L1080,320L720,320L720,320L360,320L360,320L0,320L0,320Z"
-        ></path>
-      </svg> */}
+    <div id="skills" className="bg-[#051923]">
+      
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
         <path
@@ -69,7 +63,7 @@ const Skills = () => {
         ></path>
       </svg>
 
-      <div className="py-[100px] bg-[#000814]">
+      <div className="py-[50px] bg-[#000814]">
         <Title title={"skills"} />
         <motion.div
           viewport={{ once: true }}
