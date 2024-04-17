@@ -18,7 +18,7 @@ const variants = {
 const childVariants = {
   hidden: {
     opacity: 0,
-    y: 100,
+    y: 20,
   },
   show: {
     opacity: 1,
@@ -37,7 +37,7 @@ const childVariants = {
 const childChildVariants = {
   hidden: {
     opacity: 0,
-    y: 100,
+    y: 30,
   },
   show: {
     opacity: 1,

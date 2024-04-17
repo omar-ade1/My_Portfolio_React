@@ -8,7 +8,7 @@ const allVariants = {
   show: {
     opacity: 1,
     transition: {
-      duration: 0,
+      duration: 2,
       staggerChildren: 0.3,
       when: "beforeChildren",
       delay: 0.2,
@@ -19,13 +19,13 @@ const allVariants = {
 const variants = {
   hidden: {
     opacity: 0,
-    x: "-100%",
+    x: -30,
   },
   show: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 1,
+      duration: 2,
       type: "spring",
     },
   },
@@ -34,7 +34,7 @@ const variants = {
 const variantsBoxs = {
   hidden: {
     opacity: 0,
-    x: "100%",
+    x: 20,
   },
   show: {
     opacity: 1,
