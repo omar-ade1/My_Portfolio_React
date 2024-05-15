@@ -35,14 +35,14 @@ const LeftPartText = () => {
       <div className="text-part">
         <div className="flex xxsm:flex-col items-center gap-5">
           {/* Hello and name */}
-          <h2 className="hidden xxsm:block bg-[var(--logo-color)] capitalize p-[2px] w-[100px] text-center rounded text-[var(--color-small-text)] font-bold">
+          <h2 className="hidden xxsm:block bg-white capitalize p-[2px] w-[100px] text-center rounded text-black font-bold">
             hello {"i'm"}
           </h2>
           <h2
             className={`title xxsm:text-4xl text-5xl relative w-fit font-bold text-white capitalize
                   before:content-["hello_i'm"] before:absolute before:top-[calc(-100%-10px)] before:text-lg
-                  before:left-1/2 before:-translate-x-1/2 before:bg-[var(--logo-color)] before:p-[2px] before:w-[100px]
-                  before:text-center before:rounded before:text-[var(--color-small-text)] before:font-bold xxsm:before:hidden xxsm:after:hidden`}
+                  before:left-1/2 before:-translate-x-1/2 before:bg-white before:p-[2px] before:w-[100px]
+                  before:text-center before:rounded before:text-black before:font-bold xxsm:before:hidden xxsm:after:hidden`}
           >
             Mr.Omar adel
           </h2>

@@ -1,60 +1,43 @@
+import { doc, getDoc } from "firebase/firestore";
 import Title from "../shared/Title";
-import { motion } from "framer-motion";
-const variants = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 0,
-      staggerChildren: 0.3,
-      when: "beforeChildren",
-      delay: 0.2,
-    },
-  },
-};
-
-const childVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    x: 0,
-    transition: {
-      duration: .3,
-      type: "spring",
-      mass: "1.5",
-      
-      // when: "beforeChildren",
-    },
-  },
-};
-
-const childChildVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: .3,
-      type: "spring",
-      mass: "1.5",
-    },
-  },
-};
+import { AnimatePresence } from "framer-motion";
+import { db } from "../../backend/firebase.config";
+import { useEffect, useState } from "react";
 
 const Skills = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    // Select Document From DataBase
+    setLoading(true);
+    const docRef = doc(db, "data", "skills");
+
+    // Function Doc Snap
+    getDoc(docRef)
+      .then((docSnap) => {
+        if (docSnap.exists()) {
+          setLoading(true);
+          // Set State Of Tasks From DataBase
+          setData(docSnap.data());
+        } else {
+          console.log("No such document!");
+        }
+      })
+      // While Error
+      .catch((error) => {
+        console.error("Error getting document:", error);
+      })
+      // At The Least
+      .finally(() => {
+        // Hide The Sippner
+        setLoading(false);
+      });
+  }, []);
+
+  console.log(data);
+
   return (
     <div id="skills" className="bg-[#051923]">
-      
-
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
         <path
           fill="#000814"
@@ -65,41 +48,22 @@ const Skills = () => {
 
       <div className="py-[50px] bg-[#000814]">
         <Title title={"skills"} />
-        <motion.div
-          viewport={{ once: true }}
-          variants={variants}
-          initial="hidden"
-          whileInView="show"
-          className="container pt-[40px] xmdT0:grid-cols-[repeat(auto-fill,minmax(160px,1fr))] grid grid-cols-[repeat(4,160px)] justify-center gap-10 "
-        >
-          <motion.div variants={childVariants} data-skill="html" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./html.svg" alt="html" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="css" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./css.svg" alt="css" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="java script" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./js.svg" alt="js" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="react.js" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./react.svg" alt="react" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="redux toolkit" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./redux.svg" alt="redux" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="tailwind" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./tailwind.svg" alt="tailwind" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="api" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./api.svg" alt="api" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="json" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./json.svg" alt="json" />
-          </motion.div>
-          <motion.div variants={childVariants} data-skill="bootstrap" className="skills-box">
-            <motion.img loading="lazy" variants={childChildVariants} className="max-h-full" src="./bootstrap.svg" alt="bootstrap" />
-          </motion.div>
-        </motion.div>
+
+        <AnimatePresence>
+          {loading ? (
+            <img className="block w-[150px] mx-auto" src="./loading2.gif" alt="loaading..." />
+          ) : (
+            <div className="container pt-[40px] xmdT0:grid-cols-[repeat(auto-fill,minmax(160px,1fr))] grid grid-cols-[repeat(4,160px)] justify-center gap-10 ">
+              {data?.allSkills.map((skill) => {
+                return (
+                  <div key={skill.id} data-skill={skill.skillName} className="skills-box">
+                    <img loading="lazy" className="max-h-full" src={skill.imgUrlDown} alt="html" />
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

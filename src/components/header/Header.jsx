@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const variants = {
   hidden: {
     opacity: 0,
-    x: "-100%",
+    x: -15,
     transition: {},
   },
   show: {
     opacity: 1,
-    x: 10,
+    x: 0,
     transition: {
       duration: 0.3,
       type: "spring",
@@ -20,7 +20,7 @@ const variants = {
   },
   exit: {
     opacity: 0,
-    x: "-100%",
+    x: -15,
     transition: {
       duration: 0.3,
       staggerChildren: 0.1,

@@ -128,7 +128,7 @@ body {
   }
 }
 .header-link-mobile {
-  @apply py-3 w-full text-gray-100 font-semibold relative px-3 hover:translate-x-[40px] transition-all duration-300 block;
+  @apply py-3 w-full text-gray-100 font-semibold relative px-3 hover:translate-x-[10px] transition-all duration-300 block;
 }
 .header-link-normal {
   @apply py-1 text-gray-100 font-semibold relative px-3 before:content-[''] before:absolute before:w-0 before:h-[10px] before:bg-[var(--logo-color)] before:top-full before:transition-all before:duration-300 before:left-0 hover:before:w-[10px] before:rounded-full hover:before:left-1/2 block;
@@ -211,7 +211,7 @@ body {
 /*! -------------------------------------------------------------------------- */
 
 .skills-box:hover {
-  box-shadow: 0 0 10px 0px #FFC300;
+  box-shadow: 0 0 5px 1px #FFF;
 }
 
 .skills-box:hover::before {
@@ -227,18 +227,15 @@ body {
   justify-content: center;
   padding: 5px;
   color: black;
-  text-shadow: 0px 0px 50px white,
-  -10px 10px 50px white,
-  10px -10px 50px white
-  ;
   position: absolute;
   width: 90%;
   height: 0px;
-  background: #FFC300;
+  background: #ddd;
   bottom: -5px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   transition: .3s ease-out;
+  z-index: 100;
   
 }
 /*! -------------------------------------------------------------------------- */
@@ -249,21 +246,9 @@ body {
   user-select: none;
   font-family: "Permanent Marker", cursive;
   letter-spacing: 2px;
-  /* 
-  background: hsla(210, 91%, 39%, 1);
-
-  background: linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
-  
-  background: -moz-linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
-  
-  background: -webkit-linear-gradient(90deg, hsla(210, 91%, 39%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0965C0", endColorstr="#C53A94", GradientType=1 );
-  */
-  box-shadow: 0px 0px 10px 3px #1e88e5;
 }
 .product:hover {
-  box-shadow: 0 0 10px 0px #FFC300;
+  box-shadow: 0 0 5px 0px #fff;
 }
 
 .product:hover .container-project-links {
@@ -275,16 +260,13 @@ body {
   display: flex;
   justify-content: center;
   padding: 5px;
-  color: black;
-  text-shadow: 0px 0px 50px white,
-  -10px 10px 50px white,
-  10px -10px 50px white
-  ;
   position: absolute;
   width: 90%;
   height: 0px;
-  background: #FFC300;
+  background: #ddd;
   bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   transition: .3s ease-out;
@@ -292,6 +274,6 @@ body {
 }
 
 .all-input-filld-contact:focus {
-  box-shadow: 0px 0px 10px 2px #1e88e5;
+  box-shadow: 0px 0px 5px 0px #fff;
 
 }

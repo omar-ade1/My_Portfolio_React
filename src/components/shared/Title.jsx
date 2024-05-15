@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 const variants = {
   hidden: {
     opacity: 0,
-    y: -100,
+    y: -50,
   },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 2,
-      delay: 0.5,
+      duration: 1,
+      delay: 0.3,
     },
   },
 };
