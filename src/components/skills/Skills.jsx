@@ -34,7 +34,6 @@ const Skills = () => {
       });
   }, []);
 
-  console.log(data);
 
   return (
     <div id="skills" className="bg-[#051923]">

@@ -14,7 +14,6 @@ const Auth = ({ children }) => {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
       setUser(docSnap.data());
     } else {
       console.log("No such document!");
