@@ -142,7 +142,9 @@ const ProjectsPart = () => {
     });
 
     // This For Update Page After Delete
-    setReadData(!readData);
+    setTimeout(() => {
+      setReadData(!readData);
+    }, 0);
   };
 
   // Handle Add Skill
